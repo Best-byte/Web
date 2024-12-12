@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            font-size: 16px;
+            background-color: #b4b0b0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            padding: 1rem 2rem;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: flex-start;
+            justify-content:center;
+          
+        }
+
+        .h1 {
+            text-align: center;
+            animation: text-pop 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes text-pop {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.1);
+            }
+        }
+
+        .container {
+            margin-top: 1vh;
+            margin-right: 30px;
+            display: flex;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container.change .bar1 {
+            transform: translateY(10px) rotate(-45deg);
+        }
+
+        .container.change .bar2 {
+            opacity: 0;
+        }
+
+        .container.change .bar3 {
+            transform: translateY(-10px) rotate(45deg);
+        }
+
+        .sidenav {
+            height: 100vh;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.5s;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 22px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            color: white;
+        }
+
+        #main {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        .contain {
+            display: grid;
+            grid-gap: 2vh;
+            padding: 2em;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .items {
+            background-color: white;
+            flex-direction: column;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            transition: transform 0.3s ease-in-out;
+          
+        }
+        img{
+            height:20vh;
+            object-fit: cover;
+            display: block;
+            margin: 0;
+            border-radius: 15px;
+        
+        }
+       
+        
+        .items:hover {
+            transform: scale(1.05);
+        }     
+           
+    
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items:flex-start;
+            }
+
+            h1 {
+                position:fixed;
+                text-align: left;
+                margin-left: 10vh;
+            }
+
+            
+        }
+        @media  (max-width:350px) {
+            h1{
+                font-size: x-large ;
+            }
+            
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 20px;
+            height: 2px;
+            background-color: white;
+            margin: 3px 0;
+            transition: transform 0.3s ease-in-out;
+            
+        }}
+        button{
+             margin:2vh;
+             background-color: navy;
+             border: none;
+             border-radius: 30px;
+             font-size:small;
+             font-weight: bolder;
+
+             color: white;
+             padding: 6px 2em;
+             }
+      
+    </style>
+
+    <header>
+        <div class="container" onclick="toggleNav()">
+            <span>
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </span>
+        </div>
+        <h1 class="h1">Note-Nation</h1>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./about.html">Contact</a>
+        </div>
+    </header>
+    <main>
+        <div class="contain">
+            <div class="items">
+                <img src="Screenshot 2024-12-12 185313.png" alt="">
+                <a href="Moral_science.pdf" download><button>Download</button></a>
+            </div>
+            
+            <div class="items">
+                <img src="https://placehold.co/400" alt="" srcset="">
+                  <a href="maxresdefault.jpg" download><button>Download</button></a>
+            </div>
+            <div class="items"><img src="https://placehold.co/400" alt="" srcset="">
+              <a href="Moral_science.pdf" download><button>Download</button></a>
+            </div>
+            <div class="items"><img src="https://placehold.co/400" alt="" srcset="">
+          <a href="Moral_science.pdf" download><button>Download</button></a>
+        </div>
+        </div>
+    </main>
+    <footer>
+        &copy; 2023 Note-Nation
+    </footer>
+
+    <script>
+        function toggleNav() {
+            const sidenav = document.getElementById("mySidenav");
+            sidenav.style.width = sidenav.style.width === "250px" ? "0" : "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+</html>
