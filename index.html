@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note-Nation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <style>
+       
+        
+        * {
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            font-size: 16px;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           
+            justify-content: center;
+        }
+        .header{
+             display:inline-block;
+        }
+        .header.note{
+            padding-top:5vh;
+              display:inline-block;
+           ;
+        }
+         .header .note h1{  
+             font-size:4vh;
+             margin-top:5vh;
+             animation: fadeInUp 1s ease-in-out;}
+
+            
+             
+        .head {
+            
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        @media screen and (min-width:870px) {
+                
+         .header .head {
+                font-size: 30px;
+                 margin-left:50px;
+                 margin-right: 50px;
+               
+            }
+        }
+        @media screen and (min-width:1030px) {
+                
+         .header .head {
+            font-size: 30px;
+                 margin-left:200px;
+                 margin-right:200px;
+               
+            
+                
+            }
+                
+            }
+            @media screen and (min-width:1030px) {
+                
+                .header .head {
+                   font-size: 30px;
+                        margin-left:300px;
+                        margin-right:300px;
+                      
+                   
+                       
+                   }
+                       
+                   }
+                   
+            
+
+        .p {
+            font-size: 18px;
+            color: #3e3b3b;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeInUp 1.2s ease-in-out;
+        }
+
+        .button {
+            position: relative;
+            display: flex;
+            justify-content:space-around;
+            align-items: flex-end;
+            animation: fadeInUp 1.4s ease-in-out;
+        }
+        .note{
+            position: relative;
+            display: flex;
+            justify-content:space-around;
+            align-items: flex-end;
+            padding-bottom: 5vh;
+        }
+        .header .note >button{
+            
+        
+            background-color: #0917af;
+            color: white;
+            padding: 8px 8px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+              animation: fadeInUp 1.4s ease-in-out;
+        }
+
+        .button button {
+
+          
+            background-color: #0917af;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .ul {
+            padding: 5px;
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            padding-right: 5px;
+            justify-content:center;
+            animation: fadeInUp 1.6s ease-in-out;
+        }
+
+        .ul li {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .ul a {
+           
+            color: #595858;
+            font-weight: 500;
+            text-decoration: none;
+        }
+         button >a{
+            text-decoration: none;
+            color: white;
+         }
+        /* Animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <header>
+        <div class="container">
+               <div class="header">
+                <div class="note">
+                    <h1> 📘 Note- Nation</h1>
+                      <button>Sign In</button>
+                </div>
+            <div class="head">
+                <h1>Get Free
+                    School Notes With
+                    Note-Nation</h1>
+            </div>
+            <div class="p">
+                <p>Get The Best Pdf Notes Of Subjects
+                    From Note-Nation</p>
+            </div>
+            <div class="button">
+                <button><a href="./notes.html">GET NOW</a></button>
+            </div>
+            <ul class="ul">
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./">Schools</a></li>
+                <li><a href="./">Question Paper</a></li>
+            </ul>
+        </div>
+    </header>
+</html>
