@@ -206,17 +206,34 @@
             transition: transform 0.3s ease-in-out;
 
         }}
-        button{
-             margin:2vh;
-             background-color: navy;
-             border: none;
-             border-radius: 30px;
-             font-size:medium;
-             font-weight: bolder;
+        button {
+  
+  --text-color: white;
+  margin: 2em;
+  position: relative;
+  width: 100px;
+  border: none;
+  background: blue;
+  color: var(--text-color);
+  padding: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.1s;
+  border-radius: 5px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+  box-shadow: navy 0px 7px 2px, navy 0px 8px 5px;
+}
 
-             color: white;
-             padding: 8px 2em;
-             }
+button:hover {
+  opacity: 1;
+}
+
+button:active {
+  top: 4px;
+  box-shadow: navy0px 3px 2px,navy 0px 3px 5px;
+}
+       
 
     </style>
 
